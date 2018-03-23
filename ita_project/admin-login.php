@@ -151,10 +151,10 @@ body {
   			<div class="form">
     			<img class="imag" src = "images/admin_login.png">
     			<br><br><br>
-    			<form class="login-form">
-      				<input type="text" placeholder="username"/>
-      				<input type="password" placeholder="password"/>
-      				<button>login</button>
+    			<form class="login-form" action="admin-login-check.php" method="post">
+      				<input type="text" placeholder="username" name="username" required/>
+      				<input type="password" placeholder="password" name="password" required />
+      				<button type="submit" name="submit">login</button>
       				<!--<p class="message">Not registered? <a href="#"><font color='blue'>Create an account</font></a></p>-->
     			</form>
   			</div>
