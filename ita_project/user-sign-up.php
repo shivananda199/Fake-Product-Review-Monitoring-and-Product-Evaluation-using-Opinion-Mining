@@ -16,8 +16,6 @@
 					$phone=$_POST["phone"];
 					$address=$_POST["address"];
 
-					//$check = "pop";
-
 					$check = "select * from users WHERE email='$email'";
 					$res = $conn->query($check);
 
@@ -36,16 +34,14 @@
 						echo "<script>window.alert('Password - Atleast 8 characters!!')
 							  window.location.href='sign-up.php'</script>";
 					}
-					
-					$_SESSION['username'] = $name;
 
 					if($entry==1){
 				$sql="insert into users(name, email, password, phone, address) values ('$name','$email','$password','$phone','$address')";
 					if (mysqli_query($conn, $sql))
 					{
-						$_SESSION['username'] = $name;
+						$_SESSION["user"] = $name;
 						echo "<script>window.alert('Record created successfully')
-							  window.open('men.php?login=1 & username=$name')</script>";
+							  window.location.href='men.php?login=1 & username=$name'</script>";
 					}	
 					else
 					{

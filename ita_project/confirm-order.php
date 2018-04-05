@@ -1,4 +1,6 @@
 <?php 
+	session_start();
+	$_SESSION["user"] = $_GET['username'];
 	include("login_header.php");
 	$conn = mysqli_connect("localhost","root","");
 	if (mysqli_connect_errno())
@@ -8,44 +10,20 @@
 	mysqli_select_db($conn,"ita");
 	if(isset($_GET['submit']))
 	{
-		//$category = $_POST["category"];
+		$_SESSION["user"] = $_GET['username'];
 		$pid = $_GET['pid'];
 		$username = $_GET['username'];
 		$quantity = $_GET['quantity'];
-		//echo $pid;
-		//echo $username;
-		//echo $quantity;
-
-		//$pname = $_POST["pname"];
-		//$price = $_POST["price"];
-		//$image = $_POST["image"];
-		//$info = $_POST["info"];
 
 		$sql = "select * from products where pid = '$pid'";
 		$res = $conn->query($sql);
 		$row = mysqli_fetch_row($res);
-		//echo $row[];
 
 		$sql1 = "select * from users where name='$username'";
 		$result = $conn->query($sql1);
 		$row1 = mysqli_fetch_row($result);
 
 		$total = $row[3]*$quantity;
-		//$row = mysqli_fetch_row($res);
-		/*if (mysqli_num_rows($res) > 0){
-			echo ("<SCRIPT LANGUAGE='JavaScript'>
-					window.alert('Product Already Exists!!')
-					window.location.href='ita-admin.php'
-					</SCRIPT>");
-		}
-
-		$sql = "insert into products (category,pid,pname,price,image,info) values ('$category','$pid','$pname','$price','$image','$info')";
-
-		if (mysqli_query($conn, $sql))
-		{
-			echo "<script>window.alert('Product added successfully')
-			window.location.href='admin-add-product.php'</script>";
-		}*/
 	}
 ?>
 <!DOCTYPE html>

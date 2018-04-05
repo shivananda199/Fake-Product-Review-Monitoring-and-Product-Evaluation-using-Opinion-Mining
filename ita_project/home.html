@@ -19,7 +19,34 @@
 <!--webfonts-->
 <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--webfonts-->
+
+<style type="text/css">
+	div.social {
+		margin-bottom: 1em;
+	}
+	div.social a {
+    	width: 32px;
+    	height: 32px;
+    	background: #F58703;
+    	display: inline-block;
+		margin:0 0.2em;
+		transition: 0.5s all;
+    	-webkit-transition: 0.5s all;
+    	-moz-transition: 0.5s all;
+    	-o-transition: 0.5s all;
+    	-ms-transition: 0.5s all;
+	    border-radius: 20px;
+	}
+	div.social i {
+		padding-top: 20%;
+	}
+	body {
+		background-color: #d6ebd9;
+	}
+
+</style>
 </head>
 <body>
 	<!--header-->
@@ -40,6 +67,7 @@
 							<nav class="link-effect-4" id="link-effect-4">
 								<ul class="nav navbar-nav">
 									<li><a href=""><span data-hover="Home">Home</span></a></li>
+									<li><a href="review-sign-in.php"><span data-hover="Review Products">Review Products</span></a></li>
 									<li><a href="sign-up.php"><span data-hover="Register">Register</span></a></li>
 									<li><a href="sign-in.php"><span data-hover="Login">Login</span></a></li>
 								</ul>
@@ -174,8 +202,8 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<a href="products/index.php">
-										<button type="button" class="btn btn-default">MEN</button></a>
+										<a href="men.php?login=0">
+										<button type="button" class="btn btn-success">MEN</button></a>
 									</div>
 								</div>
 							</div>
@@ -191,7 +219,7 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<button type="button" class="btn btn-default">SHOP</button>
+										<button type="button" class="btn btn-success">SHOP</button>
 									</div>
 								</div>
 							</div>
@@ -207,7 +235,8 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<button type="button" class="btn btn-default">GADGETS</button>
+										<a href="gadgets.php?login=0">
+										<button type="button" class="btn btn-success">GADGETS</button>
 									</div>
 								</div>
 							</div>
@@ -227,7 +256,8 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<button type="button" class="btn btn-default">WOMEN</button>
+										<a href="women.php?login=0">
+										<button type="button" class="btn btn-success">WOMEN</button>
 									</div>
 								</div>
 							</div>
@@ -243,7 +273,8 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<button type="button" class="btn btn-default">BOOKS</button>
+										<a href="books.php?login=0">
+										<button type="button" class="btn btn-success">BOOKS</button>
 									</div>
 								</div>
 							</div>
@@ -259,7 +290,8 @@
 									</a>
 									<br>
 									<div class="text" align="center">
-										<button type="button" class="btn btn-default">SPORTS</button>
+										<a href="sports.php?login=0">
+										<button type="button" class="btn btn-success">SPORTS</button>
 									</div>
 								</div>
 							</div>
@@ -307,11 +339,11 @@
 		
 			<div class="copy-section">
 				<div class="container">
-					<div class="social-icons">
-						<a href="#"><i class="icon1"></i></a>
-						<a href="#"><i class="icon2"></i></a>
-						<a href="#"><i class="icon3"></i></a>
-						<a href="#"><i class="icon4"></i></a>
+					<div class="social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>

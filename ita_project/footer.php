@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<style type="text/css">
 		div.social {
-			margin-bottom: 1em;
+			margin-bottom: 0px;
 		}
 		div.social a {
     		width: 32px;
@@ -23,6 +23,7 @@
 		div.social i {
 			padding-top: 20%;
 		}
+
 </style>
 
 </head>

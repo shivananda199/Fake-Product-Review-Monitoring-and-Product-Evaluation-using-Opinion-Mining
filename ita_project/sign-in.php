@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,10 +109,6 @@
 }
 body {
   background-image: url(images/login.jpg) ; /* fallback for old browsers */
-  /*background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);*/
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
@@ -139,7 +138,7 @@ body {
 				<!---Brand and toggle get grouped for better mobile display-->
 						<div class="navbar-header">
 							<div class="navbar-brand">
-								<h1><a href="home.html"><center>Online Shopping User Login Page</center></a></h1>
+								<h1><a href=""><center>Online Shopping User Login Page</center></a></h1>
 							</div>
 						</div>
 					</div>
@@ -152,10 +151,10 @@ body {
           <a href = "home.html"><h4> Return to Home Page </h4></a><br>
     			<img class="imag" src = "images/user_login.png">
     			<br><br><br>
-    			<form class="login-form">
-      				<input type="text" placeholder="username"/>
-      				<input type="password" placeholder="password"/>
-      				<button>login</button>
+    			<form class="login-form" action="user-sign-in.php" method="post">
+      				<input type="text" placeholder="email" name="email"/>
+      				<input type="password" placeholder="password" name="password"/>
+      				<button type="submit" name="submit">login</button>
       				<p class="message">Not registered? <a href="sign-up.php"><font color='blue'>Create an account</font></a></p>
               <br>
               
@@ -165,3 +164,6 @@ body {
 	</div>
 </body>
 </html>
+<?php
+  include('footer.php');
+?>

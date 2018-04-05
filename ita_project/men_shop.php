@@ -1,23 +1,22 @@
 <?php
-header("Cache-Control", "no-cache, no-store, must-revalidate");
+	//header("Cache-Control", "no-cache, no-store, must-revalidate");
 	session_start(); 
 	$pid = $_GET['pid'];
 	$login = $_GET['login'];
-	if($login==0)
+	$username = $_GET['username'];
+	if($login==0 || $username=="Dummy")
 		echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Login to SHOP!!!')
 				window.location.href='sign-in.php'
 				</SCRIPT>";
-	//echo $login;
-	//echo "string";
+
 	include("login_header.php");
-	//include("connect.php");
+
 	$conn = mysqli_connect("localhost","root","");
 	mysqli_select_db($conn,"ita");
 	$sql = "SELECT * FROM products where pid = '$pid'"; 
 	$result = $conn->query($sql);
 	$row = mysqli_fetch_array($result);
-	//echo $row['pname'];
 	$pname = $row['pname'];
 	$price = $row['price'];
 	$info = $row['info'];
@@ -105,6 +104,9 @@ header("Cache-Control", "no-cache, no-store, must-revalidate");
 	<br><br> 	
 	<!--<div class='page'>-->
 		<!--<div class='content'>-->
+		<form action="confirm-order.php?action=0" method="get">
+			<input type="hidden" name="pid" value="<?php echo $pid ?>">
+			<input type="hidden" name="username" value="<?php echo $username ?>">  
 			<table align="center">
 				<tr>
 					<th rowspan="100">
@@ -132,7 +134,7 @@ header("Cache-Control", "no-cache, no-store, must-revalidate");
 					<td>Quantity</td>
 					<td>
 						<input type="text" name="quantity">
-						<button type="button" class="btn btn-primary">Place Order</button></a>
+						<input type="submit" class="btn btn-primary" name="submit" value="Place Order">
 					</td>
 				</tr>
 				<tr>
@@ -153,6 +155,7 @@ header("Cache-Control", "no-cache, no-store, must-revalidate");
 					</td>
 				</tr>
 			</table>
+		</form>
 			<br><br><br>
 		<!--</div>-->
 	<!--</div>-->

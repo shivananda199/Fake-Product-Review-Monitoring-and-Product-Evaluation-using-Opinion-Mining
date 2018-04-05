@@ -1,6 +1,7 @@
 <?php 
 	session_start();
+	unset($_SESSION["user"]);
 	session_destroy();
 	echo "<script>window.alert('See you again!!')
-							  window.close();</script>";
+							  window.location.href='home.html'</script>";
 ?>

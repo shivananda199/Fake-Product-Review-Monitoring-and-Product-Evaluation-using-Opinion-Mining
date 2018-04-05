@@ -1,24 +1,23 @@
 <?php
-header("Cache-Control", "no-cache, no-store, must-revalidate");
+	//header("Cache-Control", "no-cache, no-store, must-revalidate");
 	session_start(); 
 	$pid = $_GET['pid'];
 	$login = $_GET['login'];
 	$username = $_GET['username'];
-	if($login==0)
+	if($login==0 || $username=="Dummy")
 		echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Login to SHOP!!!')
 				window.location.href='sign-in.php'
 				</SCRIPT>";
-	//echo $login;
-	//echo "string";
+
 	include("login_header.php");
-	//include("connect.php");
+
 	$conn = mysqli_connect("localhost","root","");
 	mysqli_select_db($conn,"ita");
 	$sql = "SELECT * FROM products where pid = '$pid'"; 
 	$result = $conn->query($sql);
 	$row = mysqli_fetch_array($result);
-	//echo $row['pname'];
+
 	$pname = $row['pname'];
 	$price = $row['price'];
 	$info = $row['info'];

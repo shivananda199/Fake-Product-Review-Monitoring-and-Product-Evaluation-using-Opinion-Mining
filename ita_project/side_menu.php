@@ -1,3 +1,6 @@
+<?php 
+    $login = $_GET['login'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,11 +63,11 @@ body {
 
 <div class="sidenav">
   <h3><u>CATEGORIES</u></h3>
-  <a href="men.php">Men</a>
-  <a href="women.php">Women</a>
-  <a href="books.php">Books</a>
-  <a href="sports.php">Sports</a>
-  <a href="gadgets.php">Gadgets</a>
+  <a href="men.php?login=$login">Men</a>
+  <a href="women.php?login=$login">Women</a>
+  <a href="books.php?login=$login">Books</a>
+  <a href="sports.php?login=$login">Sports</a>
+  <a href="gadgets.php?login=$login">Gadgets</a>
 </div>
 
 <div class="main">

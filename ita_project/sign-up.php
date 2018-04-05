@@ -102,10 +102,6 @@
 }
 body {
   background-image: url(images/login.jpg); /* fallback for old browsers */
-  /*background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);*/
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
@@ -126,16 +122,15 @@ body {
 <!--webfonts-->
 </head>
 <body>
-	<!--header-->
-	<!--<div class="col-md-12 wel-grid"> -->
+
 		<div class="header">
 			<div class="container">
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">
-				<!---Brand and toggle get grouped for better mobile display-->
+
 						<div class="navbar-header">
 							<div class="navbar-brand">
-								<h1><a href="home.html"><center>Online Shopping SignUp Page</center></a></h1>
+								<h1><a href=""><center>Online Shopping SignUp Page</center></a></h1>
 							</div>
 						</div>
 					</div>
@@ -146,17 +141,16 @@ body {
 		<div class="login-page">
   			<div class="form">
   				
-    			<form class="login-form">
-      				<!--<label><b>Name</b></label>-->
+    			<form class="login-form" action="user-sign-up.php" method="post">
+      			
               <a href = "home.html"><h4> Return to Home Page </h4></a><br><br>
-              <input type="text" placeholder="Enter your full name ( first + middle + last)"/>
-              <input type="text" placeholder="Enter your email id"/>
-      				<input type="password" placeholder="Password (minimum 8 characters)"/>
-              <input type="password" placeholder="Confirm Password"/>
-              <input type="text" placeholder="Enter your contact number"/>
-              <input type="text" placeholder="Enter your Address ( Street + Area + City + Pincode)"/>
+              <input type="text" placeholder="Enter your full name ( first + middle + last)" name="uname"/>
+              <input type="text" placeholder="Enter your email id" name="email" />
+      				<input type="password" placeholder="Password (minimum 8 characters)" name="password" />
+              <input type="text" placeholder="Enter your contact number" name="phone" />
+              <input type="text" placeholder="Enter your Address ( Street + Area + City + Pincode)" name="address" />
       				
-      				<button>create</button>
+      				<button type="submit" name="submit">create</button>
       				<p class="message">Already registered? <a href="sign-in.php"><font color='blue'>Sign In</font></a></p>
     			</form>
     			

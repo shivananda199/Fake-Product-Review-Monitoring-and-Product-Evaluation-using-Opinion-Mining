@@ -35,7 +35,6 @@
 </head>
 <body>
 	<!--header-->
-	<!--<div class="col-md-12 wel-grid"> -->
 		<div class="header">
 			<div class="container">
 				<nav class="navbar navbar-default">
@@ -43,7 +42,7 @@
 				<!---Brand and toggle get grouped for better mobile display-->
 						<div class="navbar-header">
 							<div class="navbar-brand">
-								<h1><a href="home.html">Online Shopping</a></h1>
+								<h1><a href="">Online Shopping</a></h1>
 							</div>
 						</div>
 
